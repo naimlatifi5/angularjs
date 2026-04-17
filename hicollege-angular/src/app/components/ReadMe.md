@@ -1,0 +1,1 @@
+https://medium.com/@n.wocke/how-to-build-your-own-angular-components-from-beginner-to-advanced-974fa8784383
