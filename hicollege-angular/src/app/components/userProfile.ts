@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   styles: `
     h1 {
       color: blue;
-    } // CSS styles specific to this component
+    }
   `,
 })
 export class UserProfileComponent {
