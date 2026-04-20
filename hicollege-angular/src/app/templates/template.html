@@ -34,4 +34,65 @@
     <p [class.highlight]="isHighlighted">Hello, world!</p>
     <p class="paragraph-default" [ngClass]="[isHighlighted ? 'highlight' : 'un-highlight']">Multiple class assigned</p>
   </section>
+
+  <section>
+    <h2>Control flow</h2>
+    @if (isLoggedIn) {
+    <p>Welcome back, user!</p>
+    } @else {
+    <p>Please log in to continue.</p>
+    }
+
+    <!-- from version angular 17+ use control flow directives  @if-->
+    <p *ngIf="isLoggedIn; else notLoggedIn">Welcome back, user!</p>
+    <ng-template #notLoggedIn>
+      <p>Please log in to continue with directive ngIf</p>
+    </ng-template>
+
+
+    <button (click)="isLoggedIn = !isLoggedIn">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
+    <br />
+    <h2>Looping</h2>
+    @for (employee of employees; track employee.id) {
+    <!-- The track employee.id is used to optimize the rendering of the list by tracking each employee by their id, similar to using a key in React -->
+    <div>{{ employee.age }} years old</div>
+    }
+
+  </section>
+  <section>
+    <h2>Pipes</h2>
+    <!-- Pipes are used to transform data in the template. For example, you can use the date pipe to format a date: -->
+    <p>Current date: {{ purchasedOn | date }}</p>
+  </section>
+
+  <section>
+    <h2>Content projection</h2>
+    <app-dialog>
+      <div header>
+        <h3>This is the header</h3>
+      </div>
+      <div body>
+        <p>This is the body of the dialog.</p>
+      </div>
+      <div footer>
+        <p>This is the footer</p>
+        <button>Close</button>
+      </div>
+    </app-dialog>
+  </section>
+  <section>
+    <h2>Content projection 2</h2>
+    <app-dialog>
+      <div header>
+        <h3>This is the header</h3>
+      </div>
+      <div body>
+        <p>This is the body of the dialog.</p>
+        <app-counter />
+      </div>
+      <div>
+        <p>This is the footer</p>
+      </div>
+    </app-dialog>
+  </section>
 </div>

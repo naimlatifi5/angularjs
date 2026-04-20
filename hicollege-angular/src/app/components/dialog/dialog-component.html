@@ -1,0 +1,13 @@
+<div class="dialog">
+  <h1>Dialog component</h1>
+  <p>This is a dialog component with multiple slots</p>
+  <div class="dialog-header">
+    <ng-content select="[header]">Default header</ng-content>
+  </div>
+  <div class="dialog-body">
+    <ng-content select="[body]">Default body</ng-content>
+  </div>
+  <div class="dialog-footer">
+    <ng-content select="[footer]">Default footer</ng-content>
+    <!--<ng-content select="[footer]"/> this is without default content, if footer not provided nothing is display but the above show if footer not provided default text is displayed-->
+  </div>

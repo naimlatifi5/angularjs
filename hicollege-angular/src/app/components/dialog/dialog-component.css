@@ -1,0 +1,23 @@
+.dialog {
+  border: 1px solid #ccc;
+  padding: 10px;
+
+}
+
+.dialog-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: antiquewhite;
+  padding: 10px;
+}
+
+.dialog-body {
+  margin-bottom: 10px;
+  background-color: azure;
+  padding: 10px;
+}
+
+.dialog-footer {
+  background-color: aliceblue;
+  padding: 10px;
+}
