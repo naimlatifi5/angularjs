@@ -1,0 +1,9 @@
+.highlight {
+  font-weight: bold;
+  color: green;
+}
+
+.un-highlight {
+  font-weight: normal;
+  color: red;
+}
