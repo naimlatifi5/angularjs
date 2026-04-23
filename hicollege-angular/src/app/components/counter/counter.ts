@@ -10,7 +10,7 @@ export class Counter {
   count = model<number>(0);
 
   updateCount(value: number) {
-    if (value === 0) return; // No need to update if the value is 0
+    if (value === 0) return;
     this.count.update((currentCount) => currentCount + value);
   }
 }

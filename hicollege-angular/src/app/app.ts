@@ -4,10 +4,18 @@ import { UserProfileComponent } from './components/userProfile';
 import { UserProfileComponent as UserProfileComponent2 } from './components/userProfile/userProfile';
 import { TemplateComponent } from './templates/template';
 import { Counter } from './components/counter/counter';
+import { DirectiveComponent } from './directives/directive-component/directive-component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, UserProfileComponent, UserProfileComponent2, TemplateComponent, Counter],
+  imports: [
+    RouterOutlet,
+    UserProfileComponent,
+    UserProfileComponent2,
+    TemplateComponent,
+    Counter,
+    DirectiveComponent,
+  ],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

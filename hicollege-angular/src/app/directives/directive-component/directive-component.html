@@ -1,0 +1,19 @@
+<!-- toggle the "special" class on/off with a property -->
+<h2>NgClass Example</h2>
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<hr />
+<h2>NgStyle Example</h2>
+<div [ngStyle]="currentStyles">
+  This div is initially italic, normal weight, and font size (12px).
+</div>
+
+<button (click)="toggleCanSave()">Toggle canSave ({{ canSave }})</button>
+<button (click)="toggleIsUnchanged()">Toggle isUnchanged ({{ isUnchanged }})</button>
+<button (click)="toggleIsSpecial()">Toggle isSpecial ({{ isSpecial }})</button>
+
+<h2>NgModel Example</h2>
+
+<input [(ngModel)]="username" placeholder="Enter your username">
+<p>Username: {{ username }}</p>
+
+<p appHighlight>Highlight me!</p>

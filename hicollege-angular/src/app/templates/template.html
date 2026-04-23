@@ -7,15 +7,18 @@
       example:</p>
     <img [src]="imageUrl" [alt]="imageAlt" [title]="imageTitle" />
   </section>
+  <hr />
   <section class="">
     <h2>Two way data binding</h2>
     <input [(ngModel)]="firstName" placeholder="Enter theme" />
     Firstname: {{firstName}}
   </section>
+  <hr />
   <section>
     <h2>Binding attributes</h2>
     <button [disabled]="disabled">Button is disabled</button>
   </section>
+  <hr />
   <section>
     <h2>Event binding</h2>
     <button (click)="onClick()">Click me!</button>
@@ -26,7 +29,7 @@
     <h2>Listening to enter key</h2>
     <input type="text" (keyup.enter)="handleOnEnter()" />
   </section>
-
+  <hr />
   <section>
     <h2>Class binding</h2>
     <button [style.backgroundColor]="isDisabled ? 'gray' : 'blue'">Button with class binding</button>
@@ -34,7 +37,7 @@
     <p [class.highlight]="isHighlighted">Hello, world!</p>
     <p class="paragraph-default" [ngClass]="[isHighlighted ? 'highlight' : 'un-highlight']">Multiple class assigned</p>
   </section>
-
+  <hr />
   <section>
     <h2>Control flow</h2>
     @if (isLoggedIn) {
@@ -53,18 +56,22 @@
     <button (click)="isLoggedIn = !isLoggedIn">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
     <br />
     <h2>Looping</h2>
-    @for (employee of employees; track employee.id) {
+
+    @for (employee of employees; track employee?.id) {
     <!-- The track employee.id is used to optimize the rendering of the list by tracking each employee by their id, similar to using a key in React -->
     <div>{{ employee.age }} years old</div>
+    } @empty { <!--Empty is optionall -->
+    <div>There are no employees</div>
     }
 
   </section>
+  <hr />
   <section>
     <h2>Pipes</h2>
     <!-- Pipes are used to transform data in the template. For example, you can use the date pipe to format a date: -->
     <p>Current date: {{ purchasedOn | date }}</p>
   </section>
-
+  <hr />
   <section>
     <h2>Content projection</h2>
     <app-dialog>
@@ -80,6 +87,7 @@
       </div>
     </app-dialog>
   </section>
+  <hr />
   <section>
     <h2>Content projection 2</h2>
     <app-dialog>
@@ -94,5 +102,30 @@
         <p>This is the footer</p>
       </div>
     </app-dialog>
+  </section>
+  <hr />
+  <section>
+    <h2>Ng template</h2>
+
+    <ng-template #myTemplate> <!-- This is a reusable template inside the component only  -->
+      <p>This is a template that can be reused.</p>
+    </ng-template>
+
+    <button (click)="showMyTemplate = !showMyTemplate">Toggle template</button>
+
+    @if(showMyTemplate) {
+    <ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+    }
+  </section>
+  <hr />
+  <section>
+    <h2>Ng container</h2>
+    <section>
+      <ng-container>
+        <!-- This is a container that can be used to group elements together without adding an extra element to the DOM -->
+        <h3>User bio</h3>
+        <p>Here's some info about the user</p>
+      </ng-container>
+    </section>
   </section>
 </div>
