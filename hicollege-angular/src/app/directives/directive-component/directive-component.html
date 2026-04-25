@@ -17,3 +17,12 @@
 <p>Username: {{ username }}</p>
 
 <p appHighlight>Highlight me!</p>
+<p>
+  I turned the corner
+  <ng-container> <!-- ng-container is used to group elements without adding extra nodes to the DOM -->
+    @if (username) {
+    and saw a {{ username }} sign.
+    }
+  </ng-container>
+  and continued on my way.
+</p>

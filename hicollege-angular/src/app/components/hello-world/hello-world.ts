@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './hello-world.html',
   styleUrl: './hello-world.css',
 })
-export class HelloWorld {}
+export default class HelloWorld {}

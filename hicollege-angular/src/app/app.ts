@@ -1,21 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { UserProfileComponent } from './components/userProfile';
-import { UserProfileComponent as UserProfileComponent2 } from './components/userProfile/userProfile';
-import { TemplateComponent } from './templates/template';
-import { Counter } from './components/counter/counter';
-import { DirectiveComponent } from './directives/directive-component/directive-component';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [
-    RouterOutlet,
-    UserProfileComponent,
-    UserProfileComponent2,
-    TemplateComponent,
-    Counter,
-    DirectiveComponent,
-  ],
+  imports: [RouterOutlet, RouterLink],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

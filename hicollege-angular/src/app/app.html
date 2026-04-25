@@ -155,23 +155,21 @@
     }
   }
 </style>
-
+<nav class="navigation-bar">
+  <ul>
+    <li><a routerLink="/">Components</a></li>
+    <li><a routerLink="template">Template</a></li>
+    <li><a routerLink="data-binding">Data binding</a></li>
+    <li><a routerLink="directives">Directives</a></li>
+    <li><a routerLink="services">Services</a></li>
+    <li><a routerLink="dependency-injection">Dependency Injection</a></li>
+    <li><a routerLink="forms">Forms</a></li>
+    <li><a routerLink="signals">Signals</a></li>
+  </ul>
+</nav>
 <main class="main">
   <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title() }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-    </div>
-    <div class="right-side">
-      <user-profile></user-profile>
-      <user-profile-2></user-profile-2>
-      <h2>Counter component</h2>
-      <app-counter [(count)]="initialValue"></app-counter>
-      <hr />
-      <app-template />
-      <hr />
-      <app-directive-component />
-    </div>
+    <router-outlet></router-outlet>
   </div>
 </main>
 
@@ -183,6 +181,3 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-
-<router-outlet />
