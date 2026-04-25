@@ -4,7 +4,7 @@ import { AuthService } from './AnalyticsLogger'; // we can also inject AuthServi
 
 @Component({
   selector: 'app-dependency-injection',
-  template: `<a href="#" (click)="navigateToDetail($event)">Detail Page</a>`,
+  templateUrl: './dependency-injection-component.html',
 })
 export class DependencyInjectionComponent {
   private analytics = inject(AnalyticsLogger); // we inject the AnalyticsLogger service here
