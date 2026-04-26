@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { UserProfile } from './userProfile/userProfile';
 import { Counter } from './counter/counter';
+import { Parent } from './data-flow-components/parent/parent';
 
 @Component({
   // decorator used by Angular to define a component
   selector: 'components',
-  imports: [UserProfile, Counter], // array of other components, directives, or pipes that this component depends on
+  imports: [UserProfile, Counter, Parent], // array of other components, directives, or pipes that this component depends on
   // HTML template that defines the view for the component
   template: `
     <h1>Hello components</h1>
@@ -13,6 +14,8 @@ import { Counter } from './counter/counter';
     <hr />
     <h2>Counter component</h2>
     <app-counter [(count)]="initialValue"></app-counter>
+    <h2>Data flow between parent and child components</h2>
+    <app-parent> </app-parent>
   `,
   styles: `
     h1 {

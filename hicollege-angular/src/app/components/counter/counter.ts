@@ -6,10 +6,9 @@ import { Component, model } from '@angular/core';
   styleUrls: ['./counter.css'],
 })
 export class Counter {
-  count = model<number>(0);
+  count = model<number>(0); // creates a reactive model object that manage state. Initial value is set to 0.
 
   updateCount(value: number) {
-    if (value === 0) return;
-    this.count.update((currentCount) => currentCount + value);
+    this.count.update((currentCount) => currentCount + value); // updated is a method provided by the model to update its value based on the current value. It takes a function that receives the current value and returns the new value.
   }
 }

@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 @Injectable({ providedIn: 'root' }) // This makes the service available application-wide
 export class AnalyticsLogger {
@@ -12,7 +12,7 @@ export class AnalyticsLogger {
 }
 
 // Example of another service that could be injected
-@Injectable({ providedIn: 'root' })
+@Injectable({ providedIn: 'root' }) // providers tell angular how to create instances of a service, and where to inject them, hower to scope the services to a specific module/compoennt we add providers to that component
 export class AuthService {
   isAuthenticated(): boolean {
     return true;

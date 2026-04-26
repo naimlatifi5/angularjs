@@ -1,0 +1,7 @@
+<h1>Parent component</h1>
+<p>Username: {{ username() }}!</p>
+<!-- Two-way binding with banana in a box syntax
+The square brackets [username] bind the parent’s value to the child’s @Input property (one-way data flow: parent → child).
+The parentheses (username) listen for an @Output event from the child (one-way data flow: child → parent).
+-->
+<app-username-field [(username)]="username"></app-username-field>
