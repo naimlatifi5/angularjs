@@ -6,6 +6,7 @@ import { TemplateComponent } from './templates/template';
 import { DirectiveComponent } from './directives/directive-component/directive-component';
 import { DependencyInjectionComponent } from './dependecy-injection/DependencyInjection';
 import { DataBinding } from './data-binding/data-binding';
+import { Forms } from './forms/forms';
 
 export const routes: Routes = [
   {
@@ -40,7 +41,7 @@ export const routes: Routes = [
   },
   {
     path: 'forms',
-    component: HelloWorld,
+    component: Forms,
     title: 'Forms',
   },
   {
