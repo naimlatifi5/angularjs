@@ -19,22 +19,31 @@
 <section>
   <h2>Event binding</h2>
   <button (click)="onClick()">Click me!</button>
+
   <p>{{ message }}</p>
+
   <h2>Listning to native events</h2>
   <input type="text" (keyup)="updateField($event)" />
   <br />
+
+
+
   <h2>Listening to enter key</h2>
   <input type="text" (keyup.enter)="handleOnEnter()" />
+
 </section>
 <hr />
 <section>
   <h2>Class binding</h2>
   <button [style.backgroundColor]="isDisabled ? 'gray' : 'blue'">Button with class binding</button>
+
   <button (click)="toggleHighlight()">Toggle Highlight</button>
+
   <p [class.highlight]="isHighlighted">Hello, world!</p>
   <p class="paragraph-default" [ngClass]="[isHighlighted ? 'highlight' : 'un-highlight']">Multiple class assigned</p>
 </section>
 <hr />
+
 <section>
   <h2>Control flow</h2>
   @if (isLoggedIn) {
@@ -50,13 +59,20 @@
   </ng-template>
 
 
+
+
+
+
+
   <button (click)="isLoggedIn = !isLoggedIn">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
   <br />
+
+
   <h2>Looping</h2>
 
   @for (employee of employees; track employee?.id) {
   <!-- The track employee.id is used to optimize the rendering of the list by tracking each employee by their id, similar to using a key in React -->
-  <div>{{ employee.age }} years old</div>
+  <div>{{employee.name}} {{ employee.age }} years old</div>
   } @empty { <!--Empty is optionall -->
   <div>There are no employees</div>
   }

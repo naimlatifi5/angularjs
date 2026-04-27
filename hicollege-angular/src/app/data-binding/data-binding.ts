@@ -12,7 +12,6 @@ interface Employee {
 @Component({
   selector: 'app-data-binding',
   imports: [FormsModule, NgClass, DatePipe, NgIf, NgTemplateOutlet, DialogComponent, Counter], // FormsModule is imported to use ngModel for two-way data binding in the template
-
   templateUrl: './data-binding.html',
   styleUrl: './data-binding.css',
 })
@@ -23,8 +22,8 @@ export class DataBinding {
   firstName: string = 'Superman';
   disabled: boolean = true;
   message: string = '';
-  isDisabled: boolean = true;
-  isHighlighted: boolean = true;
+  isDisabled: boolean = false;
+  isHighlighted: boolean = false;
   isLoggedIn: boolean = false;
   showMyTemplate: boolean = false;
   employees: Employee[] = [];

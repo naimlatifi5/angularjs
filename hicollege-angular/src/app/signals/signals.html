@@ -1,1 +1,29 @@
-<p>signals works!</p>
+<div class="counter-container">
+  <h2>Counter Example with Signals</h2>
+  <div class="counter-display">
+    <button (click)="decrementSignal()">-</button>
+    <!-- // The component will automatically update when count changes-->
+    <span>{{ count() }}</span>
+    <button (click)="incrementSignal()">+</button>
+  </div>
+  <h2>Directly updating the signal value</h2>
+  <button (click)="this.count.set(3)">Update count to 3</button>
+
+  <h2>Update Name Example</h2>
+  <div>
+    <span>Current name: {{ name() }}</span>
+    <br>
+    <button (click)="updateName('Alice')">Set Name to Alice</button>
+    <br>
+    <button (click)="changeName('Bob')">Change Name to Bob</button>
+    <br>
+    <button (click)="setNewSignal()">Change Name with protected</button>
+  </div>
+
+  <h2>Updated with computed</h2>
+  <div>
+    <p>FullName: {{fullName()}}</p>
+    <button (click)="this.name.set('Charlie')">Change first name to Charlie</button>
+  </div>
+
+</div>

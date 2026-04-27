@@ -16,7 +16,7 @@ export class DependencyInjectionComponent {
   navigateToDetail(event: Event) {
     event.preventDefault();
     this.analytics.trackEvent('navigation', '/details');
-    console.log(this.authService.isAuthenticated()); // Example usage of AuthService which can be used in multiple applications
+    console.log('what is isAuthenticated', this.authService.isAuthenticated()); // Example usage of AuthService which can be used in multiple applications
     console.log('what is the api endpoint from config', this.config); // Example usage of AppConfigValue to access configuration values
   }
 }

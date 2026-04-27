@@ -1,0 +1,13 @@
+.highlight {
+  background-color: yellow;
+
+}
+
+.paragraph-default {
+  font-size: 49px;
+}
+
+.un-highlight {
+  background-color: red;
+  font-size: 69px;
+}

@@ -24,6 +24,6 @@ import { Parent } from './data-flow-components/parent/parent';
   `,
 })
 export class Components {
-  initialValue = 0;
+  initialValue = 10;
   //A TypeScript class with behaviors, such as handling user input or making requests to a server.
 }

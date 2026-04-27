@@ -7,6 +7,7 @@ import { DirectiveComponent } from './directives/directive-component/directive-c
 import { DependencyInjectionComponent } from './dependecy-injection/DependencyInjection';
 import { DataBinding } from './data-binding/data-binding';
 import { Forms } from './forms/forms';
+import { Signals } from './signals/signals';
 
 export const routes: Routes = [
   {
@@ -46,7 +47,7 @@ export const routes: Routes = [
   },
   {
     path: 'signals',
-    component: HelloWorld,
+    component: Signals,
     title: 'Signals',
   },
   {

@@ -1,11 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  FormControl,
-  ReactiveFormsModule,
-  FormGroup,
-  Validators,
-  FormBuilder,
-} from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-name-editor',
@@ -13,6 +7,9 @@ import {
   templateUrl: './name-editor.html',
   styleUrl: './name-editor.css',
 })
+
+//Reactive forms and the form is defined here in typescript instead of in the template, and we use formControlName to bind the form controls to the template.
+// This is useful when we want to have more control over the form and its validation, and when we want to use the form in multiple places in our application.
 export class NameEditor {
   private formBuilder = inject(FormBuilder);
   name = new FormControl('');

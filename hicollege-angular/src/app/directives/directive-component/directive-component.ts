@@ -13,7 +13,7 @@ export class DirectiveComponent {
   currentStyles: Record<string, string> = {};
   canSave: boolean = false;
   isUnchanged: boolean = false;
-  isSpecial: boolean = false;
+  isSpecial: boolean = true;
   isAdmin: boolean = true;
   username: string = '';
 

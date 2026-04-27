@@ -16,6 +16,9 @@ export class Actor {
   templateUrl: './actor.html',
   styleUrl: './actor.css',
 })
+
+// Template driven form - the form is defined in the template and we use ngModel to bind the form controls to the template.
+// This is useful when we want to have a simple form and we don't need to have a lot of control over the form and its validation
 export class ActorFormComponent {
   skills = ['Method Acting', 'Singing', 'Dancing', 'Swordfighting'];
   model = new Actor(18, 'Tom Cruise', this.skills[3], 'CW Productions');
